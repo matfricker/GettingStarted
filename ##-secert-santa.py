@@ -3,8 +3,6 @@ import random
 # assign a random person to each person as a seceret santa
 # cannot assign same person
 
-# TODO 
-
 secret_santa_list = []
 person_list = ["Robert", "Jane", "John", "Zack", "Anna", "Rose", "Veronica", "Mike"]
 assign_person_list = list(person_list)
