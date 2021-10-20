@@ -1,5 +1,5 @@
-birth_year = 1982
-current_year = 1992
+BIRTH_YEAR = 1982
+CURRENT_YEAR = 1992
 
-age = current_year - birth_year
-print(age)
+AGE = CURRENT_YEAR - BIRTH_YEAR
+print(AGE)
