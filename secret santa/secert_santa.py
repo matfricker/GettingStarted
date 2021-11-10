@@ -12,12 +12,12 @@ def assign_person(person):
     last_person = assign_person_list[-1]
 
     if person != last_person:
-        assign_item = {
-            last_person: person
+        person_dict = {
+            person: last_person #: person
         }
 
         assign_person_list.remove(last_person)
-        secret_santa_list.append(assign_item)
+        secret_santa_list.append(person_dict)
     else:
         random.shuffle(assign_person_list)
         assign_person(person)
@@ -32,4 +32,7 @@ while N > 0:
     N -= 1
 
 print("Secret Santa List:\n")
-print(secret_santa_list)
+
+for x in secret_santa_list:
+    for k, v in x.items():
+        print(f"{k}: {v}")
