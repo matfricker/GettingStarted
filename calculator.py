@@ -14,21 +14,30 @@ def multiply(num_1, num_2):
 def divide(num_1, num_2):
     return num_1 / num_2
 
+def operationName(num):
+    if num == "1":
+        return "Add"
+    elif num == "2":
+        return "Subtract"
+    elif num == "3":
+        return "Multiple"
+    else:
+        return "Divide"
+
 print("Operator choices:")
 print("1. Add")
 print("2. Subtract")
 print("3. Multiple")
 print("4. Divide")
 
-operation = input("Enter operator (1/2/3/4):")
+operation = input("Enter operator 1, 2, 3 or 4):")
 
-print(type(operation))
-
-if operation in (1, 2, 3, 4):
-    first_input = float(input("Enter first number: "))
-    second_input = float(input("Enter second number: "))
-
-    if operation == 1:
+if operation in ("1", "2", "3", "4"):
+    if operation != "1":
+        print(f"{operationName(operation)} still under development.")
+    else:
+        first_input = int(input("Enter first number: "))
+        second_input = int(input("Enter second number: "))
         print(first_input, "+", second_input, "=", add(first_input, second_input))
 else:
     print("Invalid input")
